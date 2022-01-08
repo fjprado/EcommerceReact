@@ -9,5 +9,6 @@ namespace EcommerceReact.Dominio.Commands
     public class PedidoCommand
     {
         public int Paginacao { get; set; }
+        public int Pagina { get; set; }
     }
 }

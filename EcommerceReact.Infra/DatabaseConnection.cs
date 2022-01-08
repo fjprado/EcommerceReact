@@ -72,9 +72,9 @@ namespace EcommerceReact.Infra
                 connection = new NpgsqlConnection(Padrao);
                 connection.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
 
             return connection;

@@ -6,6 +6,6 @@ namespace EcommerceReact.Dominio.Interfaces.RepositorioLeitura
 {
     public interface IPedidoRepositorioLeitura
     {
-        Task<IEnumerable<Pedido>> ObterPedidos(int paginacao);
+        Task<IEnumerable<Pedido>> ObterPedidos(int paginacao, int pagina);
     }
 }

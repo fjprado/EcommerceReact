@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EcommerceReact.Dominio.Models
+﻿namespace EcommerceReact.Dominio.Models
 {
     public class Encomenda
     {

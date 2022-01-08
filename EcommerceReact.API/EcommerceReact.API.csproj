@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EcommerceReact.Handler\EcommerceReact.Handler.csproj" />
+    <ProjectReference Include="..\EcommerceReact.Infra\EcommerceReact.Infra.csproj" />
+    <ProjectReference Include="..\EcommerceReact.Repositorio\EcommerceReact.Repositorio.csproj" />
+  </ItemGroup>
+
+</Project>

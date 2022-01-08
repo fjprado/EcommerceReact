@@ -1,6 +1,7 @@
 ﻿using EcommerceReact.Dominio.Commands;
 using EcommerceReact.Dominio.Interfaces.Handler;
 using EcommerceReact.Dominio.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,6 +27,7 @@ namespace EcommerceReact.API.Controllers
         /// <response code="204">Se não houver pedidos registrados</response>   
         /// <response code="400">Caso ocorra erro retorna a mensagem de exceção</response> 
         [HttpPost("ObterPedidos")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Pedido>>> ObterProdutos([FromBody] PedidoCommand parametros)
         {
             try

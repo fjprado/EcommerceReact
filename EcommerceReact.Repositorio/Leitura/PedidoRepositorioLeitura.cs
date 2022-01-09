@@ -15,7 +15,7 @@ namespace EcommerceReact.Repositorio.Leitura
         private readonly IConnectionHandler connection;
         public PedidoRepositorioLeitura(IConnectionHandler connection) => this.connection = connection;
 
-        public async Task<IEnumerable<Pedido>> ObterPedidos(int paginacao, int pagina)
+        public async Task<IEnumerable<Pedido>> ObterPedidos(int pagina)
         {
             using (var conexao = connection.Create())
             {
@@ -27,8 +27,8 @@ namespace EcommerceReact.Repositorio.Leitura
                                     pedido.idencomenda
                             FROM pedido
                             ORDER BY pedido.datacriacao
-                            LIMIT {paginacao}
-                            OFFSET {paginacao * pagina}");
+                            LIMIT 20
+                            OFFSET {20 * pagina}");
 
                 if (listaPedidos.Any())
                 {

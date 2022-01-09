@@ -21,7 +21,7 @@ namespace EcommerceReact.API.Controllers
         /// <response code="200">Retorna o token</response>
         /// <response code="204">Se não houver token</response>   
         /// <response code="400">Caso ocorra erro retorna a mensagem de exceção</response> 
-        [HttpPost("ObterAutenticacao")]
+        [HttpPost("obterautenticacao")]
         public ActionResult<string> ObterAutenticacao()
         {
             try

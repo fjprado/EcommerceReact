@@ -6,6 +6,6 @@ namespace EcommerceReact.Dominio.Interfaces.Handler
 {
     public interface IPedidoCommandHandler
     {
-        Task<IEnumerable<Pedido>> ObterPedidos(int paginacao, int pagina);
+        Task<IEnumerable<Pedido>> ObterPedidos(int pagina);
     }
 }

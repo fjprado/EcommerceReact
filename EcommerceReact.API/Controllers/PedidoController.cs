@@ -26,13 +26,13 @@ namespace EcommerceReact.API.Controllers
         /// <response code="200">Retorna a lista de pedidos registrados</response>
         /// <response code="204">Se não houver pedidos registrados</response>   
         /// <response code="400">Caso ocorra erro retorna a mensagem de exceção</response> 
-        [HttpPost("ObterPedidos")]
+        [HttpGet("obterpedidos/{pagina}")]
         [Authorize]
-        public async Task<ActionResult<IEnumerable<Pedido>>> ObterProdutos([FromBody] PedidoCommand parametros)
+        public async Task<ActionResult<IEnumerable<Pedido>>> ObterPedidos(int pagina)
         {
             try
             {
-                var pedidos = await _pedidoCommandHandler.ObterPedidos(parametros.Paginacao, parametros.Pagina);
+                var pedidos = await _pedidoCommandHandler.ObterPedidos(pagina);
 
                 if (!pedidos.Any())
                     return NoContent();

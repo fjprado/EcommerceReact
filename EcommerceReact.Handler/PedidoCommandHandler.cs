@@ -15,11 +15,11 @@ namespace EcommerceReact.Handler
 
         public PedidoCommandHandler(IPedidoRepositorioLeitura pedidoRepositorioLeitura) => this._pedidoRepositorioLeitura = pedidoRepositorioLeitura;
 
-        public async Task<IEnumerable<Pedido>> ObterPedidos(int paginacao, int pagina)
+        public async Task<IEnumerable<Pedido>> ObterPedidos(int pagina)
         {
             try
             {
-                return await _pedidoRepositorioLeitura.ObterPedidos(paginacao, pagina);
+                return await _pedidoRepositorioLeitura.ObterPedidos(pagina);
             }
             catch (Exception)
             {
